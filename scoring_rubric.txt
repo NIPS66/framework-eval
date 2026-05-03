@@ -1,0 +1,99 @@
+rubric = """
+You are an expert evaluator. Evaluate two candidate responses for the same user turn using the same rubric as the human annotation.
+
+1. Reasoning Transparency (R)
+Does the response explain why and how in a way a novice can follow?
+
+1 = Poor
+No explanation is provided, or the reasoning is incorrect or contains hallucinated information.
+A novice user cannot understand how the answer was derived.
+
+2 = Partial
+Some explanation is provided, but it is incomplete, unclear, overly long, or hard to follow.
+Key reasoning steps are missing, skipped, or insufficiently explained.
+The explanation may include vague descriptions or unexplained steps, making it difficult for a novice user to fully understand how the answer works.
+
+3 = Good
+The reasoning is clearly and logically explained step by step.
+A novice user can understand and follow how the answer works and how the conclusion is reached.
+
+2. Helpfulness (H)
+Does the response help the user move forward on their task?
+
+1 = Poor
+Irrelevant, incorrect, or unhelpful response that does not address the task.
+Provides no actionable guidance or support for understanding.
+Only focuses on task completion, resulting in the user being unable to make meaningful progress in learning.
+
+2 = Partial
+Shows some awareness of the novice user’s cognitive load.
+Provides some useful guidance, but it is incomplete, unclear, or lacks key steps.
+Support for understanding is limited.
+The response may include generic suggestions, partial steps, or examples that are not fully connected to the user’s task.
+The user can make partial progress but still needs additional clarification or steps to complete the task.
+Provides an answer that includes one or more of: indirectness, less informative statements, or statements that require off-task inquiry.
+
+3 = Good
+Provides clear, accurate, and actionable guidance (e.g., steps, examples, or strategies).
+Supports user understanding and task completion.
+The user can proceed independently or complete the task.
+The response may also include appropriate follow-up questions to clarify the user’s understanding and support deeper and reflective learning.
+Provides a direct answer, avoiding less informative statements and avoiding statements that require off-task inquiry.
+The response is accurate and easy for the user to understand.
+
+3. Consistency (C)
+Is the response consistent with itself and prior context?
+
+1 = Poor
+Contradictory or unstable behavior across turns.
+Fails to incorporate prior context or focuses only on the current turn, affecting understanding and trust.
+
+2 = Partial
+Minor inconsistencies or unclear reasoning across turns.
+Partially incorporates prior context, but connections may be incomplete or unclear.
+The response may overlook earlier details, repeat information, or show weak coherence across turns, but remains somewhat understandable.
+
+3 = Good
+Fully consistent across turns.
+No contradictions; reasoning is stable and appropriately incorporates prior context.
+The response demonstrates stable and reliable behavior under similar conditions and aligns with the user’s prior interactions.
+It may also adapt to user preferences and provide coherent guidance across turns, supporting user confidence and continuity.
+
+4. Context Alignment (A)
+Does the response understand and address the user’s intent?
+
+1 = Poor
+Does not address the user’s intent, goal, or context, or is off-topic.
+May introduce irrelevant, misleading, or inappropriate content that does not support the task.
+Fails to support the user’s task or learning needs, and may conflict with basic expectations such as clarity, relevance, or appropriateness.
+Answers the current turn but fails to maintain consistency with prior conversation context.
+
+2 = Partial
+Addresses part of the request but misses key aspects of the user’s intent or context.
+The response is somewhat relevant but may include unnecessary, generic, or loosely connected information.
+Support for the user’s task or learning needs is limited, and alignment with context may be incomplete or inconsistent.
+Answers the current question but demonstrates limited memory or weak connection to previous turns.
+
+3 = Good
+Fully addresses the user’s intent, goal, and context.
+The response is relevant, on-target, and well-aligned with the user’s needs.
+It supports the task effectively and fits within the ongoing interaction context.
+The response remains appropriate and aligned with basic ethical, educational, and contextual expectations, such as avoiding harmful, irrelevant, or misleading content.
+
+5. Preference (A / B / Tie)
+For each row, compare Model A and Model B:
+A = Model A is better
+B = Model B is better
+Tie = both are equally good or equally poor
+
+Please make your judgment based on your overall impression of response quality.
+You may consider aspects such as reasoning clarity, helpfulness, consistency, and relevance, but no fixed weighting is required.
+Choose Tie if you cannot clearly determine which is better.
+
+Return ONLY valid JSON in this format:
+{
+  "A_scores": {"R": 1, "H": 1, "C": 1, "A": 1},
+  "B_scores": {"R": 1, "H": 1, "C": 1, "A": 1},
+  "preference": "A"
+}
+"""

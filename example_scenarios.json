@@ -1,0 +1,29 @@
+[
+  {
+    "scenario_id": "S1",
+    "turns": [
+      "Can you generate two beat patterns using only the symbols 0, +, and -?",
+      "Is 12 steps ideal for a beat pattern?"
+    ],
+    "description": "Constraint-based generation with follow-up clarification"
+  },
+  {
+    "scenario_id": "S11",
+    "turns": [
+      "What is a beat list?",
+      "Can you give me some percussion sounds?",
+      "Can you create some percussion beat patterns?",
+      "How can I use a beat list to apply these sounds?"
+    ],
+    "description": "Concept introduction and application across multiple steps"
+  },
+  {
+    "scenario_id": "S12",
+    "turns": [
+      "How do I use makeBeat()?",
+      "Isn’t it makeBeat(sound, track, start, beat)?",
+      "Can you explain how to use makeBeat more simply?"
+    ],
+    "description": "Function usage clarification and simplified explanation"
+  }
+]
