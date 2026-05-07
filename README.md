@@ -15,7 +15,7 @@ RHCA evaluates model behavior in multi-turn interactions using four dimensions:
 
 * `scoring_rubric.txt` – evaluation criteria
 * `example_scenarios.json` – sample multi-turn scenarios
-* `run_evaluation.py` – simple script to load and evaluate scenarios
+* `run_evaluation.py` – script to load scenarios and demonstrate evaluation
 * `requirements.txt` – no external dependencies
 
 ## How to Run
@@ -26,10 +26,11 @@ python run_evaluation.py
 
 ## Reproducibility
 
-This repository provides a simple, executable example of the RHCA framework.
-It shows how scenarios and rubric can be used together for evaluation.
+This repository provides a simple executable example of the RHCA framework.
+It shows how scenarios and the rubric can be used together for evaluation.
 
 ## Notes
 
 * Anonymized for double-blind review
-* Script is a minimal demonstration (not a full system)
+* The script is a minimal demonstration of the evaluation process
+
