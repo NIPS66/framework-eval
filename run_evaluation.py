@@ -5,7 +5,6 @@ def load_scenarios(path):
         return json.load(f)
 
 def dummy_evaluate(scenario):
-    # Placeholder for RHCA evaluation (R, H, C, A)
     return {
         "Reasoning Transparency": 2,
         "Helpfulness": 2,
@@ -21,7 +20,6 @@ def main():
         score = dummy_evaluate(s)
         results.append(score)
 
-    # Per-dimension aggregation (no single overall score)
     avg_scores = {
         "Reasoning Transparency": 0,
         "Helpfulness": 0,
