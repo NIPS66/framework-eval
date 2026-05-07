@@ -1,20 +1,35 @@
-# Evaluation Framework Materials
+# RHCA Evaluation Framework (Anonymous Submission)
 
-This repository provides supplementary materials for a structured evaluation framework.
+This repository provides materials and a minimal runnable example for the RHCA evaluation framework.
+
+## Overview
+
+RHCA evaluates model behavior in multi-turn interactions using four dimensions:
+
+* Reasoning Transparency (R)
+* Helpfulness (H)
+* Consistency (C)
+* Context Alignment (A)
 
 ## Contents
 
-* `scoring_rubric.txt`: Defines the evaluation criteria across four dimensions: Reasoning Transparency, Helpfulness, Consistency, and Context Alignment.
-* `example_scenarios.json`: Provides representative multi-turn interaction scenarios used for evaluation.
+* `scoring_rubric.txt` – evaluation criteria
+* `example_scenarios.json` – sample multi-turn scenarios
+* `run_evaluation.py` – simple script to load and evaluate scenarios
+* `requirements.txt` – no external dependencies
 
-## Description
+## How to Run
 
-The evaluation framework is designed to assess model responses in multi-turn interactions, focusing on how well responses support user understanding, task progress, and contextual alignment.
+```bash
+python run_evaluation.py
+```
 
-These materials are intended to support understanding and reproducibility of the evaluation design described in the submission.
+## Reproducibility
+
+This repository provides a simple, executable example of the RHCA framework.
+It shows how scenarios and rubric can be used together for evaluation.
 
 ## Notes
 
-This repository is anonymized for double-blind review.
-
-Additional materials and resources will be released upon publication.
+* Anonymized for double-blind review
+* Script is a minimal demonstration (not a full system)
